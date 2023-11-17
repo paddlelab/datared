@@ -1,0 +1,20 @@
+[theme]
+base = "light"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[global]
+developmentMode = false
+
+[runner]
+magicEnabled = true
+
+[client]
+displayEnabled = true
+
+[layout]
+wideMode = true
