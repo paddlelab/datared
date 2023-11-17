@@ -47,7 +47,7 @@ fig = go.Figure(data=data, layout=layout)
 # Update the layout
 fig.update_layout(
     title='RED Data Profiles',
-    width=1500, 
+    autosize=True,
     height=900
 )
 
