@@ -44,10 +44,9 @@ layout = go.Layout(
 # Create the figure
 fig = go.Figure(data=data, layout=layout)
 
-# Update the layout
 fig.update_layout(
-    autosize=False,
-    width=1000,
+    autosize=True,
+    width=None,
     height=800,
     margin=dict(
         l=50,
@@ -64,5 +63,5 @@ col1, col2, col3 = st.columns([1,6,1])
 
 # Use the middle column to display the content
 with col2:
-    st.write("<h1 style='text-align: center; color: black;'>RED Data Profiles</h1>", unsafe_allow_html=True)
+    st.write("<h1 style='text-align: center; color: black; width: 100%;'>RED Data Profiles</h1>", unsafe_allow_html=True)
     st.plotly_chart(fig)
