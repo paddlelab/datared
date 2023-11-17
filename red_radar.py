@@ -48,7 +48,34 @@ fig = go.Figure(data=data, layout=layout)
 fig.update_layout(
     title='RED Data Profiles',
     width=1500, 
-    height=900
+    height=900,
+    annotations=[
+        dict(
+            x=1.05,
+            y=1.02,
+            align="right",
+            valign="top",
+            text='Toggle sessions on/off',
+            showarrow=False,
+            xref="paper",
+            yref="paper",
+            xanchor="center",
+            yanchor="top",
+        )
+    ],
+    legend=dict(
+        x=1,
+        y=1,
+        traceorder="normal",
+        font=dict(
+            family="sans-serif",
+            size=12,
+            color="black"
+        ),
+        bgcolor="LightSteelBlue",
+        bordercolor="Black",
+        borderwidth=2
+    )
 )
 
 # Display the radar chart
