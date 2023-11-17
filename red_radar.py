@@ -62,5 +62,5 @@ fig.update_layout(
 
 # Create a container for the chart
 with st.container():
-    st.markdown("<h1 style='text-align: center; color: black;'>RED Data Profiles</h1>", unsafe_allow_html=True)
+    st.write("<h1 style='text-align: center; color: black;'>RED Data Profiles</h1>", unsafe_allow_html=True)
     st.plotly_chart(fig)
