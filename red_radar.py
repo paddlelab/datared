@@ -48,8 +48,8 @@ fig = go.Figure(data=data, layout=layout)
 # Update the layout
 fig.update_layout(
     autosize=False,
-    width=800,
-    height=500,
+    width=1000,
+    height=800,
     margin=dict(
         l=50,
         r=50,
@@ -61,6 +61,6 @@ fig.update_layout(
 )
 
 # Create a container for the chart
-with st.beta_container():
+with st.container():
     st.markdown("<h1 style='text-align: center; color: black;'>RED Data Profiles</h1>", unsafe_allow_html=True)
     st.plotly_chart(fig)
