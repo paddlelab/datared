@@ -5,8 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 import plotly.graph_objs as go
 import plotly.express as px
 
-# Load your data here, for example:
-# result_df = pd.read_csv('your_data.csv')
+result_df = pd.read_csv('overall.csv')
 
 # Initialize a scaler
 scaler = MinMaxScaler()
