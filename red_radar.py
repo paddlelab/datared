@@ -46,7 +46,7 @@ fig = go.Figure(data=data, layout=layout)
 
 # Update the layout
 fig.update_layout(
-    title='RED Data Profiles',
+    title='RED Data Profiles (toggle sessions on/off by clicking on the legend)',
     autosize=True,
     height=900
 )
