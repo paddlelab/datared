@@ -52,4 +52,4 @@ fig.update_layout(
 )
 
 # Display the radar chart
-st.plotly_chart(fig)
+st.plotly_chart(fig, use_container_width=True)
