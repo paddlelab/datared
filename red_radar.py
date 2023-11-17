@@ -46,7 +46,7 @@ layout = go.Layout(
 fig = go.Figure(data=data, layout=layout)
 
 # Update the layout
-fig.update_layout(,
+fig.update_layout(
     autosize=False,
     width=800,
     height=500,
