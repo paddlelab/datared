@@ -5,7 +5,6 @@ from sklearn.preprocessing import MinMaxScaler
 import plotly.graph_objs as go
 import plotly.express as px
 
-
 result_df = pd.read_csv('overall.csv')
 
 # Initialize a scaler
@@ -60,7 +59,10 @@ fig.update_layout(
     paper_bgcolor="LightSteelBlue",
 )
 
-# Create a container for the chart
-with st.container():
+# Create a column layout with three columns
+col1, col2, col3 = st.columns([1,6,1])
+
+# Use the middle column to display the content
+with col2:
     st.write("<h1 style='text-align: center; color: black;'>RED Data Profiles</h1>", unsafe_allow_html=True)
     st.plotly_chart(fig)
