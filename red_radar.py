@@ -5,7 +5,8 @@ from sklearn.preprocessing import MinMaxScaler
 import plotly.graph_objs as go
 import plotly.express as px
 
-result_df = pd.read_csv('overall.csv')
+# Load your data here, for example:
+# result_df = pd.read_csv('your_data.csv')
 
 # Initialize a scaler
 scaler = MinMaxScaler()
@@ -41,22 +42,15 @@ layout = go.Layout(
     showlegend=True
 )
 
+# Create the figure
+fig = go.Figure(data=data, layout=layout)
+
 # Update the layout
 fig.update_layout(
-    autosize=False,
-    width=800,
-    height=500,
-    margin=dict(
-        l=50,
-        r=50,
-        b=100,
-        t=100,
-        pad=4
-    ),
-    paper_bgcolor="LightSteelBlue",
+    title='RED Data Profiles',
+    width=1500, 
+    height=900
 )
 
-# Create a container for the chart
-with st.beta_container():
-    st.markdown("<h1 style='text-align: center; color: black;'>Your Chart Title</h1>", unsafe_allow_html=True)
-    st.plotly_chart(fig)
+# Display the radar chart
+st.plotly_chart(fig)
