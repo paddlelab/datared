@@ -46,7 +46,7 @@ fig = go.Figure(data=data, layout=layout)
 
 fig.update_layout(
     autosize=True,
-    width=None,
+    width=800,
     height=800,
     margin=dict(
         l=50,
@@ -58,10 +58,6 @@ fig.update_layout(
     paper_bgcolor="LightSteelBlue",
 )
 
-# Create a column layout with three columns
-col1, col2, col3 = st.columns([1,6,1])
-
-# Use the middle column to display the content
-with col2:
-    st.write("<h1 style='text-align: center; color: black; width: 100%;'>RED Data Profiles</h1>", unsafe_allow_html=True)
-    st.plotly_chart(fig)
+# Display the heading and the chart
+st.write("<h1 style='text-align: center; color: black; width: 100%;'>RED Data Profiles</h1>", unsafe_allow_html=True)
+st.plotly_chart(fig)
